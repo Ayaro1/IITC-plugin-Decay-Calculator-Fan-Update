@@ -1,6 +1,6 @@
 // ==UserScript==
 // @id             iitc-plugin-decay-calculator@Zaso
-// @name           IITC plugin: Decay Calculator
+// @name           IITC plugin: Decay Calculator update by Ayaro
 // @category       Info
 // @version        0.0.3.20200625.123456
 // @namespace      http://www.giacintogarcea.com/ingress/items/
