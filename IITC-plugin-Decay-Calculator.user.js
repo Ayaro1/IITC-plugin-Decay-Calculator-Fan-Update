@@ -6,7 +6,7 @@
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
 // @downloadURL    https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
-// @description    Estimate the portal decaying.
+// @description    Estimate the portal decaying. Fan update by Ayaro
 // @include        *://*.ingress.com/intel*
 // @include        *://*.ingress.com/mission/*
 // @include        *://intel.ingress.com/*
