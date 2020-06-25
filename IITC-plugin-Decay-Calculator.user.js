@@ -4,8 +4,8 @@
 // @category       Info
 // @version        0.0.3.20200625.123456
 // @namespace      http://www.giacintogarcea.com/ingress/items/
-// @updateURL      http://www.giacintogarcea.com/ingress/iitc/decay-calculator-by-zaso.meta.js
-// @downloadURL    http://www.giacintogarcea.com/ingress/iitc/decay-calculator-by-zaso.user.js
+// @updateURL      https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
+// @downloadURL    https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
 // @description    Estimate the portal decaying.
 // @include        *://*.ingress.com/intel*
 // @include        *://*.ingress.com/mission/*
