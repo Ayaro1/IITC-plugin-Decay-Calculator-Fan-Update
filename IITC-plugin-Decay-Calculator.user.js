@@ -2,7 +2,7 @@
 // @id             iitc-plugin-decay-calculator@Zaso
 // @name           IITC plugin: Decay Calculator
 // @category       Info
-// @version        0.0.3.20200625.123456
+// @version        0.0.3.20200707.1
 // @namespace      http://www.giacintogarcea.com/ingress/items/
 // @updateURL      https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
 // @downloadURL    https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
@@ -19,18 +19,18 @@
 function wrapper(){
 	// ensure plugin framework is there, even if iitc is not yet loaded
 	if(typeof window.plugin !== 'function') window.plugin = function(){};
-	
+
 	// PLUGIN START ////////////////////////////////////////////////////////
-	
+
 		// use own namespace for plugin
 		window.plugin.decayCalculator = function() {};
-	
+
 		window.plugin.decayCalculator.generateArrayEnergy = function(data){
 			var d = data.portalDetails;
-	
+
 			var l,v,max,perc,perc2;
 			var list = [];
-	
+
 			for(var i=0;i<8;i++){
 				var reso = d.resonators[i];
 				if(reso){
@@ -46,21 +46,21 @@ function wrapper(){
 					perc = 0;
 					perc2 = 0;
 				}
-	
+
 				list.push(perc);
 			}
 			return list.sort();
 		}
 		window.plugin.decayCalculator.generateArrayDays = function(risArray){
 			list = [];
-	
+
 			for(i in risArray){
 				var gg = window.plugin.decayCalculator.risDecay(risArray[i]);
 				list.push(gg);
 			}
 			return list.sort();
 		}
-	
+
 		window.plugin.decayCalculator.risMin = function(risArray){
 			var min = 0;
 			for(i in risArray){
@@ -75,15 +75,15 @@ function wrapper(){
 			}
 			return(max);
 		}
-	
+
 		window.plugin.decayCalculator.risDecay = function(ris){
 			return Math.ceil(ris/5);
 		}
-	
+
 		window.plugin.decayCalculator.portalNeut = function(risArray){
 			var max = window.plugin.decayCalculator.risMax(risArray);
 			var gg = window.plugin.decayCalculator.risDecay(max);
-	
+
 			return(gg);
 		}
 		window.plugin.decayCalculator.linkNeut = function(risArray){
@@ -91,28 +91,28 @@ function wrapper(){
 			var gg = window.plugin.decayCalculator.risDecay(risArray[5]);
 			return gg;
 		}
-	
+
 		//---------------------------------------------------------------------------------------
-	
+
 		window.plugin.decayCalculator.appendDetails = function(data){
 			window.plugin.decayCalculator.appendDetails2(data);
 		}
-	
+
 		window.plugin.decayCalculator.appendDetails2 = function(data){
 			risArray = window.plugin.decayCalculator.generateArrayEnergy(data);
-	
+
 			fd = window.plugin.decayCalculator.risDecay(risArray[0]);
 			ld = window.plugin.decayCalculator.linkNeut(risArray);
 			pd = window.plugin.decayCalculator.portalNeut(risArray);
-	
+
 			var html = '';
 			html += '<div>Incomplete in<br/>max <b>'+fd+'</b> day(s)</div>';
 			html += '<div>Links expires in<br/>max <b>'+ld+'</b> day(s)</div>';
 			html += '<div>Neutral in<br/>max <b>'+pd+'</b> day(s)</div>';
-	
+
 			$('#portaldetails .linkdetails').before('<div class="decayCalculator">'+html+'</div>');
 		}
-	
+
 		//---------------------------------------------------------------------------------------
 		// Append the stylesheet
 		//---------------------------------------------------------------------------------------
@@ -123,15 +123,15 @@ function wrapper(){
 				+'.decayCalculator div b{color:#ffce00;}'
 			).appendTo('head');
 		}
-	
+
 		var setup = function() {
 			window.plugin.decayCalculator.setupCSS();
-	
+
 			window.addHook('portalDetailsUpdated', window.plugin.decayCalculator.appendDetails);
 		};
-	
+
 	// PLUGIN END //////////////////////////////////////////////////////////
-	
+
 	if(window.iitcLoaded && typeof setup === 'function'){
 		setup();
 	}else{
