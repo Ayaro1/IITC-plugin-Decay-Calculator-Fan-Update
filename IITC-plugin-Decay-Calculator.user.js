@@ -2,7 +2,7 @@
 // @author         Zaso
 // @name           IITC plugin: Decay Calculator
 // @category       Info
-// @version        0.0.4.20200826.2208
+// @version        0.0.4.20200828.0219
 // @description    Estimate portal decay
 // @id             decay-calculator
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
@@ -18,7 +18,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2020-08-26-2208';
+plugin_info.dateTimeVersion = '2020-08-28-0219';
 plugin_info.pluginId = 'decay-calculator';
 //END PLUGIN AUTHORS NOTE
 
@@ -33,7 +33,7 @@ plugin_info.pluginId = 'decay-calculator';
 
   // use own namespace for plugin
   window.plugin.decayCalculator = function() {};
-  window.plugin.decayCalculator.decayRate = 5; // percent of resonator's capacity per day
+  window.plugin.decayCalculator.decayRate = 15; // percent of resonator's capacity per day
 
   window.plugin.decayCalculator.generateArrayEnergy = function(data){
     var d = data.portalDetails;
