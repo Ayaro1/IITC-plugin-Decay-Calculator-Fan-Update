@@ -15,21 +15,6 @@ function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
 if(typeof window.plugin !== 'function') window.plugin = function() {};
 
-//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
-//(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'ZasoItems';
-plugin_info.dateTimeVersion = '2020-08-28-0219';
-plugin_info.pluginId = 'decay-calculator';
-//END PLUGIN AUTHORS NOTE
-
-
-
-// PLUGIN START ////////////////////////////////////////////////////////
-// History
-// 0.0.4 moving some constants
-// 0.0.3 Headers changed. Ready for IITC-CE
-// 0.0.2 Original sript
-
 
   // use own namespace for plugin
   window.plugin.decayCalculator = function() {};
