@@ -2,7 +2,7 @@
 // @author         Zaso
 // @name           IITC plugin: Decay Calculator
 // @category       Info
-// @version        0.0.4.20200828.0219
+// @version        0.0.5.20200828.0219
 // @description    Estimate portal decay
 // @id             decay-calculator
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
