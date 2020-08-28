@@ -6,7 +6,7 @@
 // @description    Estimate portal decay
 // @id             decay-calculator
 // @namespace      https://github.com/IITC-CE/ingress-intel-total-conversion
-// @downloadURL    https://github.com/MysticJay/ZasoItems.CE/raw/master/decay-calculator.user.js
+// @downloadURL    https://github.com/Ayaro1/IITC-plugin-Decay-Calculator-Fan-Update/raw/master/IITC-plugin-Decay-Calculator.user.js
 // @match          https://intel.ingress.com/*
 // @grant          none
 // ==/UserScript==
@@ -14,6 +14,21 @@
 function wrapper(plugin_info) {
 // ensure plugin framework is there, even if iitc is not yet loaded
 if(typeof window.plugin !== 'function') window.plugin = function() {};
+
+//PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
+//(leaving them in place might break the 'About IITC' page or break update checks)
+plugin_info.buildName = 'ZasoItems';
+plugin_info.dateTimeVersion = '2020-08-28-0219';
+plugin_info.pluginId = 'decay-calculator';
+//END PLUGIN AUTHORS NOTE
+
+
+
+// PLUGIN START ////////////////////////////////////////////////////////
+// History
+// 0.0.4 moving some constants
+// 0.0.3 Headers changed. Ready for IITC-CE
+// 0.0.2 Original sript
 
 
   // use own namespace for plugin
